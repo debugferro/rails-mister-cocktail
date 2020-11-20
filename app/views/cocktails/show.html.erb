@@ -11,3 +11,11 @@
 
 <%= link_to "<< List Cocktails", root_path %>
 <%= link_to "Add dose", new_cocktail_dose_path(@cocktail) %>
+<%= link_to "Add review", new_cocktail_review_path(@cocktail) %>
+
+<hr>
+<% @cocktail.reviews.each do |r| %>
+  <p><%= r.content %></p>
+  <p><%= r.rating %></p>
+  <hr>
+<% end %>
