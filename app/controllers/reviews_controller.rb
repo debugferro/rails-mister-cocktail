@@ -18,7 +18,7 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:content, :rating, :cocktail_id)
+    params.require(:review).permit(:content, :rating, :cocktail_id, :name)
   end
 
   def set_cocktail

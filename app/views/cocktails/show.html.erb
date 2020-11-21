@@ -1,4 +1,6 @@
-<%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+<% if @cocktail.photo.attached? %>
+  <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
 <h1>
   <%= @cocktail.name %>
 </h1>
@@ -14,8 +16,10 @@
 <%= link_to "Add review", new_cocktail_review_path(@cocktail) %>
 
 <hr>
-<% @cocktail.reviews.each do |r| %>
+<% @cocktail.reviews.order('created_at ASC').each do |r| %>
+  <% date = r.created_at.to_time.strftime('%B %e at %l:%M %p')%>
+  <% stars = "" %><% r.rating.times { stars = "#{stars}⭐" } %>
+  <p><%= stars %> by <%= r.name.capitalize %> in <%= date %></p>
   <p><%= r.content %></p>
-  <p><%= r.rating %></p>
   <hr>
 <% end %>

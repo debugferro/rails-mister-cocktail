@@ -1,4 +1,8 @@
 <%= simple_form_for [@cocktail, @review] do |f| %>
+  <%= f.input :name %>
+  <%= f.label :anonymous %>
+  <% js_code = "document.querySelector('.anonymous').value = 'anonymous'" %>
+  <%= f.check_box :name, { class: "anonymous", onchange: js_code }, "", "anonymous" %>
   <%= f.input :content %>
   <% rating = [['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]] %>
   <%= f.label :rating %>

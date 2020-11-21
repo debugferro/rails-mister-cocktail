@@ -1,0 +1,7 @@
+.db not found, maybe you meant:
+
+ActiveRecord::Generators::Migration#db_migrate_path
+ActiveRecord::Tasks::DatabaseTasks#db_dir
+HTTP::CookieJar::MozillaStore#db_add
+HTTP::CookieJar::MozillaStore#db_delete
+HTTP::CookieJar::MozillaStore#db_prepare
