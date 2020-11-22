@@ -1,1 +1,151 @@
 // Specific CSS for your home-page
+
+body {
+  background-color: #2C2C2C;
+  font-family: 'Montserrat', sans-serif;
+  a{
+    text-decoration: none!important;
+  }
+}
+
+.mcard-content {
+  display: flex;
+    flex-direction: column;
+}
+
+.card-title > h1 {
+}
+
+.mcontainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.mcard {
+    box-shadow: -1px 2px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 11px;
+    max-width: 288px;
+    background-color: #EBEDD3;
+    flex: 0 1 48%;
+    display: flex;
+}
+
+.img-body {
+  // position: absolute;
+}
+
+.mcard-img-body {
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.mcard-img {
+  // border-bottom-left-radius: 50%;
+  // border-bottom-right-radius: 50%;
+  flex-shrink: 0;
+  min-width: 100%;
+      min-height: 100%;
+  border-bottom-right-radius: 30%;
+  border-bottom-left-radius: 30%;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+    object-fit: cover;
+}
+
+.mcard-footer {
+      margin-top: auto;
+  display: flex;
+  align-self: center;
+  p {
+    margin-left: 7px;
+    margin-right: 0px;
+    // display: inline-block;
+    text-decoration: none;
+    color: #536a7b;
+    font-weight: bold;
+  }
+}
+
+.mcard-footer-img-btn {
+      // display: inline-block;
+      background-color: #1a2635;
+          margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.5);
+    width: 37px;
+    height: 35px;
+    transition: 0.5s;
+}
+
+.mcard-footer-img-btn > img {
+  width: 30px;
+  margin-left: 3px;
+  height: 30px;
+  transition: 1s;
+  margin-right: 0;
+}
+
+#ingredients {
+  padding-left: 23px;
+}
+
+
+.mcard-footer-link:hover {
+
+  .mcard-footer-img-btn {
+    background-color: #255692;
+    img {
+      width: 35px;
+      height: 35px;
+      position: relative;
+      right: -10px;
+    }
+    p {
+      color: #74a6ca;
+      font-weight: bold;
+    }
+  }
+}
+
+.btn-position {
+    //   position: absolute;
+    // top: 41.3%;
+    // right: 40%;
+        margin: 0 auto;
+    position: relative;
+    max-width: 180px;
+    top: -17px;
+}
+
+
+.mcard-body {
+  // margin-top: 124px;
+  //   display: grid;
+  //   align-items: center;
+      display: flex;
+    flex-direction: column;
+}
+
+.mcard-body > p {
+      text-align: center;
+}
+
+.card-body > a {
+  // position: relative;
+  //   z-index: 10;
+}
+
+.btn-cocktail {
+  color: #ebedd3;
+  background-color: #1a2635;
+      font-weight: bold;
+}
+
+.btn-cocktail:hover {
+  color: #ebedd3;
+  background-color: #255692;
+}
